@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural People's Empowerment Association (RPEA)</title>
+    <!-- Tailwind CSS for Modern Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rpeaBlue: '#1E40AF',
+                        rpeaOrange: '#EA580C',
+                        rpeaGreen: '#16A34A',
+                        rpeaGold: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <!-- Logo referenced verbatim -->
+                    <img src="RPEA Logo (Eng) (1).jpg" alt="RPEA Logo" class="h-16 w-16 object-contain">
+                    <div>
+                        <span class="text-xl font-bold text-rpeaBlue block">RPEA</span>
+                        <span class="text-xs text-gray-500 hidden sm:block">Rural People's Empowerment Association</span>
+                    </div>
+                </div>
+                <!-- Dynamic Navigation Tabs -->
+                <div class="flex items-center space-x-1 sm:space-x-4">
+                    <button onclick="switchTab('home')" id="btn-home" class="tab-btn px-3 py-2 rounded-md text-sm font-medium text-rpeaBlue bg-blue-50 border-b-2 border-rpeaBlue">ပင်မစာမျက်နှာ</button>
+                    <button onclick="switchTab('projects')" id="btn-projects" class="tab-btn px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-rpeaBlue hover:bg-gray-50">စီမံကိန်းများနှင့် မှတ်တမ်းများ</button>
+                    <button onclick="switchTab('team')" id="btn-team" class="tab-btn px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-rpeaBlue hover:bg-gray-50">အဖွဲ့ဝင်များနှင့် ဆက်သွယ်ရန်</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="bg-gradient-to-r transition-all duration-500 from-blue-900 to-slate-800 text-white py-16 px-4 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="bg-rpeaOrange text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Established: February 12, 2024</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-2">ကျေးလက်လူထု စွမ်းဆောင်ရည်မြှင့်တင်ရေးအသင်း</h1>
+            <h2 class="text-xl md:text-2xl font-light text-blue-200 tracking-wide">Rural People’s Empowerment Association (RPEA)</h2>
+            <p class="mt-6 text-sm md:text-base text-gray-300 italic">"Community-Led, Empowerment, Towards Sustained Life"</p>
+            
+            <div class="mt-8 inline-block bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-left max-w-2xl">
+                <span class="text-rpeaGold font-bold block mb-1"><i class="fa-solid fa-eye mr-2"></i>Organizational Vision:</span>
+                <p class="text-sm text-gray-100">To empower rural populations across the nation by enhancing their capacity to fulfill their basic socioeconomic needs and improve their quality of life.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN INTERACTIVE CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- TAB 1: HOME & ABOUT US -->
+        <section id="home" class="tab-content active space-y-12 animate-fadeIn">
+            
+            <!-- Quick Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-rpeaBlue text-center">
+                    <span class="block text-3xl font-bold text-gray-900">59</span>
+                    <span class="text-sm text-gray-500">Active Staff Members</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-rpeaOrange text-center">
+                    <span class="block text-3xl font-bold text-gray-900">12</span>
+                    <span class="text-sm text-gray-500">States & Regions Reached</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-rpeaGreen text-center">
+                    <span class="block text-3xl font-bold text-gray-900">481+</span>
+                    <span class="text-sm text-gray-500">Total Activities Implemented</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-rpeaGold text-center">
+                    <span class="block text-3xl font-bold text-gray-900">100%</span>
+                    <span class="text-sm text-gray-500">Project Completion Rate</span>
+                </div>
+            </div>
+
+            <!-- Background & Legal Status -->
+            <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-bold text-rpeaBlue mb-4"><i class="fa-solid fa-landmark mr-2"></i>အဖွဲ့အစည်း နောက်ခံသမိုင်း (Background)</h3>
+                <p class="leading-relaxed text-gray-600 mb-4 text-justify">
+                    Agriculture serves as the primary pillar of Myanmar’s economy, with approximately 75% of the total population residing in rural areas. To support the development of these rural regions and enhance the capacity of their communities, the Rural People's Empowerment Association (RPEA) was established. The association is comprised of members with extensive experience in the development sector, all of whom are dedicated to actively participating in rural development initiatives nationwide. Guided by these objectives, RPEA was founded on February 12, 2024.
+                </p>
+                <div class="bg-amber-50 border-l-4 border-rpeaGold p-4 rounded-r-lg mt-4 text-sm text-amber-900">
+                    <strong>Official Registration:</strong> Officially granted its registration certificate by the Union Registration Board of the Ministry of Home Affairs on November 8, 2024, under <strong>Registration Number 1/Internal/0080(2022)</strong>. This registration authorizes the organization to conduct development operations across all States and Regions within the country.
+                </div>
+            </div>
+
+            <!-- Objectives & Core Values -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Objectives -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-rpeaBlue mb-4"><i class="fa-solid fa-bullseye mr-2"></i>Strategic Objectives</h3>
+                    <p class="text-xs text-gray-500 mb-3 italic">In collaboration with the Ministry of Co-operatives and Rural Development:</p>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-rpeaGreen mt-1 mr-2"></i> <span>To implement and expand capacity-building programs that enhance the sustainable livelihoods of local community members.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-rpeaGreen mt-1 mr-2"></i> <span>To actively participate in national poverty reduction initiatives and foster the development of resilient communities.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-rpeaGreen mt-1 mr-2"></i> <span>To facilitate and support the improvement of production capacities for impoverished individuals and stakeholders.</span></li>
+                    </ul>
+                </div>
+                <!-- Core Values -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-rpeaOrange mb-4"><i class="fa-solid fa-heart mr-2"></i>Core Values</h3>
+                    <ul class="space-y-2 text-xs md:text-sm text-gray-600">
+                        <li class="border-b pb-2">⚖️ High responsibility, accountability, operational transparency, and impartiality.</li>
+                        <li class="border-b pb-2">🤝 Mutual respect among members and promoting organizational unity.</li>
+                        <li class="border-b pb-2">👩‍👦 Upholding the dignity of women and children; gender-sensitive practices.</li>
+                        <li class="border-b pb-2">🏡 Honoring local regulations, traditions, and community standards.</li>
+                        <li class="border-b pb-2">🌍 Respecting individual differences and diverse perspectives.</li>
+                        <li class="border-b pb-2">🇲🇲 Strictly adhering to the laws, rules, and regulations mandated by the State.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Core Operational Activities -->
+            <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
+                <h3 class="text-2xl font-bold text-rpeaGold mb-6 text-center"><i class="fa-solid fa-gears mr-2"></i>Core Operational Activities</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white/5 p-4 rounded-lg border border-white/10 hover:bg-white/10 transition">
+                        <i class="fa-solid fa-hand-holding-dollar text-2xl text-rpeaGold mb-3 block"></i>
+                        <h4 class="font-semibold mb-2">Aid & Resources</h4>
+                        <p class="text-xs text-gray-400">Providing technical assistance and financial aid for poverty alleviation initiatives.</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg border border-white/10 hover:bg-white/10 transition">
+                        <i class="fa-solid fa-road text-2xl text-rpeaGold mb-3 block"></i>
+                        <h4 class="font-semibold mb-2">Infrastructure</h4>
+                        <p class="text-xs text-gray-400">Developing farm roads, small bridges, latrines, and clean drinking water facilities.</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg border border-white/10 hover:bg-white/10 transition">
+                        <i class="fa-solid fa-faucet text-2xl text-rpeaGold mb-3 block"></i>
+                        <h4 class="font-semibold mb-2">WASH Services</h4>
+                        <p class="text-xs text-gray-400">Implementing rural water supply, environmental sanitation, and hygiene services.</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-lg border border-white/10 hover:bg-white/10 transition">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-rpeaGold mb-3 block"></i>
+                        <h4 class="font-semibold mb-2">Vocational Training</h4>
+                        <p class="text-xs text-gray-400">Tailoring classes, engine repair courses, and sustainable agricultural practices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Experience & Partners -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-3"><i class="fa-solid fa-map-location-dot text-rpeaBlue mr-2"></i>Geographic Coverage (12 Regions)</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Sagaing, Mandalay, Magway, Shan (Southern), Mon, Kayin, Bago, Ayeyarwady, Naypyitaw, Chin, Kachin, and Rakhine.</p>
+                    <h4 class="font-bold text-gray-900 mt-6 mb-3"><i class="fa-solid fa-briefcase text-rpeaBlue mr-2"></i>Sectors of Expertise</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2.5 py-1 rounded-md">Food Security</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2.5 py-1 rounded-md">Health & Education</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2.5 py-1 rounded-md">Climate Change Adaptation</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2.5 py-1 rounded-md">Women Empowerment</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs px-2.5 py-1 rounded-md">DRR & Humanitarian Response</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-4"><i class="fa-solid fa-handshake text-rpeaGreen mr-2"></i>Organizations Served Within Myanmar</h4>
+                    <div class="space-y-3 text-sm">
+                        <div><strong class="text-xs uppercase text-gray-400 block">UN Agencies</strong> UNDP, UNOPS (LIFT), IFAD, ADB, UN-Habitat, WFP</div>
+                        <div><strong class="text-xs uppercase text-gray-400 block">INGOs</strong> IFAC, COM, CARDNO, MERCYCORPs, Innovations for Poverty Action (IPA), CARE Myanmar</div>
+                        <div><strong class="text-xs uppercase text-gray-400 block">Government Departments</strong> DRD, DOA (Ministry of Co-operatives and Rural Development)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: PROJECTS & STATISTICS -->
+        <section id="projects" class="tab-content space-y-12">
+            
+            <!-- Dynamic Project Selector Widget -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-900 mb-4"><i class="fa-solid fa-chart-pie text-rpeaBlue mr-2"></i>2024–2025 Implementation Dashboard Summary</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6">
+                    <div class="p-4 bg-blue-50 text-blue-900 rounded-lg text-center">
+                        <span class="block text-2xl font-bold">146</span>
+                        <span class="text-xs font-medium">Construction Activities</span>
+                    </div>
+                    <div class="p-4 bg-green-50 text-green-900 rounded-lg text-center">
+                        <span class="block text-2xl font-bold">48</span>
+                        <span class="text-xs font-medium">Agricultural Plots</span>
+                    </div>
+                    <div class="p-4 bg-amber-50 text-amber-900 rounded-lg text-center">
+                        <span class="block text-2xl font-bold">287</span>
+                        <span class="text-xs font-medium">Capacity Training Sessions</span>
+                    </div>
+                    <div class="p-4 bg-slate-100 text-slate-900 rounded-lg text-center">
+                        <span class="block text-2xl font-bold">481</span>
+                        <span class="text-xs font-medium font-bold">Grand Total Completed</span>
+                    </div>
+                </div>
+
+                <!-- Detailed Breakdown Table -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead class="bg-gray-800 text-white">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold">Category</th>
+                                <th class="px-4 py-3 text-left font-semibold">Activity Title / Project Details</th>
+                                <th class="px-4 py-3 text-center font-semibold">Total Projects</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr class="bg-gray-50 font-medium"><td colspan="3" class="px-4 py-2 text-rpeaBlue">1. Construction & Infrastructure (Total: 146)</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Roads</td><td class="px-4 py-2">Gravel (23), Concrete (47), Kankar (18), Stone-Paved (14), Murram (2)</td><td class="px-4 py-2 text-center font-semibold">104</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Water / Public</td><td class="px-4 py-2">Water Drainage Canal (12), Embankment (2), Pond Renovation (8), Well Drilling (2), Overhead Water Tank (1)</td><td class="px-4 py-2 text-center font-semibold">25</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Community</td><td class="px-4 py-2">School Kitchen Construction (2), Multipurpose Community Centre Construction (15)</td><td class="px-4 py-2 text-center font-semibold">17</td></tr>
+                            
+                            <tr class="bg-gray-50 font-medium"><td colspan="3" class="px-4 py-2 text-rpeaGreen">2. Agriculture Initiatives (Total: 48)</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Gardens & Plots</td><td class="px-4 py-2">School Garden (5), Home Garden (3), Green Gram Demonstration Plot (2)</td><td class="px-4 py-2 text-center font-semibold">10</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Distribution</td><td class="px-4 py-2">Seed Distribution for Cultivation</td><td class="px-4 py-2 text-center font-semibold">38</td></tr>
+                            
+                            <tr class="bg-gray-50 font-medium"><td colspan="3" class="px-4 py-2 text-rpeaOrange">3. Training & Capacity Building (Total: 287)</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Climate & Safety</td><td class="px-4 py-2">Climate Change & DRR Awareness (97), Climate-Smart Agriculture Training (96)</td><td class="px-4 py-2 text-center font-semibold">193</td></tr>
+                            <tr><td class="px-4 py-2 pl-8 text-xs text-gray-400">Technical / Social</td><td class="px-4 py-2">Social and Behavior Change Communication (43), Waste Management (9), Plant Grafting Techniques (9), Post-Harvest Management (33)</td><td class="px-4 py-2 text-center font-semibold">94</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Active & Recent Partner Projects Timeline -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-gray-900"><i class="fa-solid fa-list-check text-rpeaBlue mr-2"></i>Ongoing and Completed Partnership Frameworks</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- WFP Projects -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-500">World Food Program (WFP) Portfolio</span>
+                        <h4 class="text-lg font-bold mt-1 text-gray-800">Assets Creation and Livelihood Project (ACL)</h4>
+                        <p class="text-xs text-gray-500 mt-1">Mon State (Dec 2024 - Dec 2025) & Mandalay Region (Sep 2025 - Dec 2025)</p>
+                        <hr class="my-3">
+                        <h4 class="text-sm font-semibold text-gray-800">School Feeding Programme</h4>
+                        <p class="text-xs text-gray-500">Yedashe, Oktwin, Phyu Townships (Bago Region) | <span class="text-amber-600 font-medium">Dec 2025 – Feb 2027</span></p>
+                        <hr class="my-3">
+                        <h4 class="text-sm font-semibold text-gray-800">Eco-system, Community Infrastructure and Livelihoods Project (ECL)</h4>
+                        <p class="text-xs text-gray-500">Mandalay & Bago Regions | <span class="text-green-600 font-medium">Feb 2026 – Current</span></p>
+                    </div>
+
+                    <!-- UNOCHA & CARE -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-emerald-500 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-500">UNOCHA Integration</span>
+                            <h4 class="text-lg font-bold mt-1 text-gray-800">Provision of Education for Crisis-Affected Children and Youth</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kyainseikgyi Township, Kayin State | <span class="text-amber-600 font-medium">Jan 2026 – Jan 2027</span></p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-gray-100">
+                            <span class="text-xs font-bold uppercase tracking-wider text-purple-500">CARE Myanmar Partnership</span>
+                            <h4 class="text-lg font-bold mt-1 text-gray-800">Strong and Resilient Communities (SARC/SCORE) Project</h4>
+                            <p class="text-xs text-gray-500 mt-1">Bilin Township, Mon State | <span class="text-green-600 font-medium">Feb 2026 – Current</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: TEAM & CONTACT INFO -->
+        <section id="team" class="tab-content space-y-12">
+            
+            <!-- Office Address and Core Mail Header -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="md:flex md:items-center md:justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900"><i class="fa-solid fa-building-user text-rpeaBlue mr-2"></i>ရုံးချုပ် တည်နေရာနှင့် လိပ်စာ</h3>
+                        <p class="text-sm text-gray-600 mt-2 max-w-2xl">
+                            Room No. (2B), 2nd Floor, Building No. (579), Thanthumar Road, Ward (10), South Okkalapa Township, Thingangyun District, Yangon Region.
+                        </p>
+                    </div>
+                    <div class="mt-4 md:mt-0 bg-blue-50 p-4 rounded-xl text-center md:text-right">
+                        <span class="text-xs text-gray-400 block uppercase">Organization Focal Email</span>
+                        <a href="mailto:2024rpea@gmail.com" class="text-rpeaBlue font-bold text-lg hover:underline">2024rpea@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Management Team Directory Grid -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center"><i class="fa-solid fa-users-gear mr-2"></i>Organization Contact Persons</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Contact 1 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-rpeaBlue font-bold text-lg mb-4">UT</div>
+                            <h4 class="font-bold text-gray-900 text-base">U Zaw Tun Oo</h4>
+                            <p class="text-xs text-rpeaBlue font-medium">Head of Organisation</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> oozawtunoo@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-449249875</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact 2 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-rpeaOrange font-bold text-lg mb-4">DY</div>
+                            <h4 class="font-bold text-gray-900 text-base">Daw Hnin Nu Yee</h4>
+                            <p class="text-xs text-rpeaOrange font-medium">Project Team Leader</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> hnin.nuyee77@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-425361187</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact 3 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-rpeaGreen font-bold text-lg mb-4">UH</div>
+                            <h4 class="font-bold text-gray-900 text-base">U Saw Hla Htun</h4>
+                            <p class="text-xs text-rpeaGreen font-medium">Admin Manager</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> sawhlahtunjute@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-5351592</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact 4 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold text-lg mb-4">UN</div>
+                            <h4 class="font-bold text-gray-900 text-base">U Maung Nu</h4>
+                            <p class="text-xs text-slate-600 font-medium">Finance Manager</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> maungnu@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-444402191</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact 5 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold text-lg mb-4">DP</div>
+                            <h4 class="font-bold text-gray-900 text-base">Daw Poe Sa Bai</h4>
+                            <p class="text-xs text-purple-600 font-medium">Project Manager</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> poesabaiphu@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-796790369</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact 6 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-lg mb-4">DT</div>
+                            <h4 class="font-bold text-gray-900 text-base">Dr. Tial Len Par</h4>
+                            <p class="text-xs text-amber-600 font-medium">Programme Analyst (M&E)</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> tiallenpar.mn@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-887783219</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact 7 -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-700 font-bold text-lg mb-4">DM</div>
+                            <h4 class="font-bold text-gray-900 text-base">Daw Tin May Oo</h4>
+                            <p class="text-xs text-rose-600 font-medium">Analyst (Capacity Building)</p>
+                        </div>
+                        <div class="mt-6 pt-3 border-t border-gray-50 space-y-1 text-xs text-gray-500">
+                            <div><i class="fa-solid fa-envelope mr-1 text-gray-400"></i> tinmayoo009@gmail.com</div>
+                            <div><i class="fa-solid fa-phone mr-1 text-gray-400"></i> 09-971535756</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2 text-gray-300">&copy; 2026 Rural People's Empowerment Association (RPEA). All Rights Reserved.</p>
+            <p>Empowering Communities &bull; Enhancing Livelihoods &bull; Reaching 12 Regions Across Myanmar</p>
+        </div>
+    </footer>
+
+    <!-- DYNAMIC JAVASCRIPT CONTROLLER -->
+    <script>
+        function switchTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active style from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('text-rpeaBlue', 'bg-blue-50', 'border-b-2', 'border-rpeaBlue');
+                btn.classList.add('text-gray-600');
+            });
+
+            // Show target tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Apply active layout to selected button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('text-gray-600');
+            activeBtn.classList.add('text-rpeaBlue', 'bg-blue-50', 'border-b-2', 'border-rpeaBlue');
+            
+            // Auto scroll to top of viewport smoothly
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
